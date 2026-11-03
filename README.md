@@ -1,5 +1,7 @@
 # MISSION CONTROL — Every decision has an orbit
 
+**Play it:** https://death150811.github.io/mission-control/
+
 An interactive space-mission design and flight-operations simulator. You receive a scientific objective, a budget and engineering
 constraints, then **build** a spacecraft from physical modules in a **volumetric 3D workshop**, **assemble** a launch vehicle,
 **qualify** the design in a test facility, **fly** the ascent and the injection burn yourself, **operate** the mission day by day,
