@@ -1,0 +1,132 @@
+/* Themes. Each one swaps palette AND typefaces; component CSS only reads the variables.
+   console  - the original flight-console look (system DIN-style fonts)
+   houston  - neutral graphite, IBM Plex + Barlow: reads like an engineering workstation
+   blueprint- light paper with blue ink, Source Serif/Sans/Code: reads like a printed design review
+   apollo   - warm 1960s control room, Bebas/Work Sans/Courier Prime: olive, cream and orange */
+
+:root[data-theme='houston'] {
+  --bg: #121418; --bg2: #181b20; --panel: #1d2127; --panel2: #262b32; --panel3: #303640;
+  --line: #394049; --line2: #566070;
+  --blue: #1d4f9f; --blue2: #2a63bf; --blue-lt: #8db6f2; --blue-bg: rgba(141, 182, 242, 0.1);
+  --red: #e8472b; --red-dk: #b8341c; --red-bg: rgba(232, 71, 43, 0.13);
+  --amber: #f2b23a; --amber-bg: rgba(242, 178, 58, 0.11); --green: #49c47e; --green-bg: rgba(73, 196, 126, 0.11);
+  --text: #eceff3; --muted: #a4adba; --dim: #8b95a3; --btn-primary: #c93c22;
+  --topbar-bg: #0c0e11; --side-bg: #15181c; --deep: #0c0e11; --deep2: #101317; --btn-hover: #38404b;
+  --sans: 'IBM Plex Sans', 'Segoe UI', Roboto, Arial, sans-serif;
+  --cond: 'Barlow Semi Condensed', 'IBM Plex Sans', 'Arial Narrow', Arial, sans-serif;
+  --mono: 'IBM Plex Mono', Consolas, 'SFMono-Regular', Menlo, monospace;
+}
+:root[data-theme='houston'] body { font-size: 14px; }
+:root[data-theme='houston'] h1 { letter-spacing: 0.02em; font-weight: 600; }
+:root[data-theme='houston'] h2 { font-weight: 600; letter-spacing: 0.01em; }
+
+:root[data-theme='blueprint'] {
+  --bg: #e7e2d3; --bg2: #efebdd; --panel: #fbf9f2; --panel2: #f2eee1; --panel3: #e5dfcc;
+  --line: #cbc3aa; --line2: #a69d82;
+  --blue: #123c7c; --blue2: #1d56a8; --blue-lt: #1d56a8; --blue-bg: rgba(18, 60, 124, 0.08);
+  --red: #c4311b; --red-dk: #9c2412; --red-bg: rgba(196, 49, 27, 0.1);
+  --amber: #8a5200; --amber-bg: rgba(138, 82, 0, 0.1); --green: #166a30; --green-bg: rgba(27, 122, 58, 0.1);
+  --text: #17233b; --muted: #475268; --dim: #5a6475;
+  --hi: #0a1a38; --on-accent: #fff; --btn-primary: #c4311b; --red-text: #a82614;
+  --br-sensing: #1d56a8; --br-power: #8a5200; --br-comms: #1b6b36; --br-avionics: #6b3fb5; --br-thermal: #b0431f; --br-propulsion: #b02a2a; --br-structures: #55606f; --br-launch: #2b3a55;
+  --topbar-bg: #0e2a5c; --side-bg: #f1ede0; --deep: #f5f2e8; --deep2: #f5f2e8; --btn-hover: #e3dcc6; --stripe-ink: #fbf9f2;
+  --sans: 'Source Sans 3', 'Segoe UI', Roboto, Arial, sans-serif;
+  --cond: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --mono: 'Source Code Pro', Consolas, 'SFMono-Regular', Menlo, monospace;
+  color-scheme: light;
+}
+:root[data-theme='blueprint'] body { font-size: 15px; }
+:root[data-theme='blueprint'] h1 { font-weight: 700; letter-spacing: 0.02em; text-transform: none; font-size: 32px; }
+:root[data-theme='blueprint'] h2 { font-weight: 700; }
+:root[data-theme='blueprint'] .logo b { text-transform: uppercase; letter-spacing: 0.14em; font-size: 16px; color: #fff; }
+:root[data-theme='blueprint'] .logo small { color: #aebfe0; }
+:root[data-theme='blueprint'] .topnav button { color: #c4d1ec; }
+:root[data-theme='blueprint'] .topnav button:hover, :root[data-theme='blueprint'] .topnav button.on { color: #fff; }
+:root[data-theme='blueprint'] .team-pill { color: #fff; }
+:root[data-theme='blueprint'] ::selection { background: var(--blue2); }
+:root[data-theme='blueprint'] .panel { box-shadow: 0 1px 0 rgba(23, 35, 59, 0.06); }
+:root[data-theme='blueprint'] .btn { background: #fff; }
+:root[data-theme='blueprint'] .btn.primary { background: var(--red); }
+:root[data-theme='blueprint'] .stepper button { background: #fbf9f2; }
+:root[data-theme='blueprint'] .stepper button.on { background: var(--blue); }
+:root[data-theme='blueprint'] .mono { font-feature-settings: 'zero' 1; }
+
+:root[data-theme='apollo'] {
+  --bg: #17140f; --bg2: #1d1913; --panel: #231f17; --panel2: #2c271d; --panel3: #373023;
+  --line: #4a4233; --line2: #6a604a;
+  --blue: #4d5e2c; --blue2: #657a39; --blue-lt: #cbd88f; --blue-bg: rgba(203, 216, 143, 0.1);
+  --red: #e9772b; --red-dk: #b95a1a; --red-bg: rgba(233, 119, 43, 0.14);
+  --amber: #f1c453; --amber-bg: rgba(241, 196, 83, 0.11); --green: #9fcb5e; --green-bg: rgba(159, 203, 94, 0.11);
+  --text: #f0e8d2; --muted: #b9ae8f; --dim: #a39877; --btn-primary: #e9772b; --on-primary: #17140f;
+  --topbar-bg: #0f0d09; --side-bg: #1a1711; --deep: #100e0a; --deep2: #14120d; --btn-hover: #413a2a; --stripe-ink: #17140f;
+  --sans: 'Work Sans', 'Segoe UI', Roboto, Arial, sans-serif;
+  --cond: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif;
+  --mono: 'Courier Prime', 'Courier New', Consolas, monospace;
+}
+:root[data-theme='apollo'] h1, :root[data-theme='apollo'] h2 { font-weight: 400; letter-spacing: 0.06em; }
+:root[data-theme='apollo'] h1 { font-size: 38px; }
+:root[data-theme='apollo'] h2 { font-size: 24px; }
+:root[data-theme='apollo'] .logo b { font-weight: 400; font-size: 21px; letter-spacing: 0.16em; }
+:root[data-theme='apollo'] .panel > .ph h3 { font-family: var(--cond); font-weight: 400; font-size: 15px; letter-spacing: 0.12em; }
+:root[data-theme='apollo'] .mono, :root[data-theme='apollo'] dd, :root[data-theme='apollo'] .num { font-weight: 700; }
+:root[data-theme='apollo'] body { font-size: 14.5px; }
+
+/* theme switcher in the top bar */
+.themebox { display: flex; align-items: center; gap: 6px; }
+.themebox select { background: transparent; border: 1px solid rgba(255, 255, 255, 0.28); color: #e8ecf4; padding: 3px 6px; font-size: 11px; letter-spacing: 0.04em; cursor: pointer; border-radius: 0; }
+.themebox select option { color: #111; background: #fff; }
+.themebox button { background: transparent; border: 1px solid rgba(255, 255, 255, 0.28); color: #e8ecf4; padding: 3px 8px; font-size: 11px; cursor: pointer; }
+.themebox button[aria-pressed='true'] { background: rgba(255, 255, 255, 0.16); }
+.themebox button:hover, .themebox select:hover { border-color: #fff; }
+
+/* animated backdrop canvas sits behind the whole app */
+.backdrop { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; display: block; }
+.app { position: relative; z-index: 1; background: transparent; }
+.stepper { background: transparent; }
+@media (prefers-reduced-motion: reduce) { .backdrop { display: none; } }
+
+/* narrower windows: stat rows wrap instead of overflowing */
+.g2 > *, .g3 > *, .g4 > * { min-width: 0; }
+@media (max-width: 1100px) { .g4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 1280px) {
+  .topbar { flex-wrap: wrap; height: auto; padding: 6px 14px; row-gap: 2px; }
+  .topnav { flex-wrap: wrap; align-self: auto; }
+  .topnav button { padding: 8px 10px; margin-bottom: 0; }
+}
+
+/* badges inside the blue panel headers read as light chips in every theme */
+.panel > .ph .badge { background: rgba(0, 0, 0, 0.3); border-color: rgba(255, 255, 255, 0.5); color: #fff; }
+.panel > .ph .badge.gr { color: #c9f8da; } .panel > .ph .badge.or { color: #ffe3a8; } .panel > .ph .badge.rd { color: #ffd6cf; } .panel > .ph .badge.cy { color: #dce9ff; }
+/* brighter text for green badges on dark themes */
+:root { --green-text: #5fdf88; }
+:root[data-theme='houston'] { --green-text: #66d994; }
+:root[data-theme='apollo'] { --green-text: #b6dd7c; }
+:root[data-theme='blueprint'] { --green-text: #166a30; }
+.badge.gr { color: var(--green-text); }
+
+/* keyboard users: a clear focus ring on everything interactive */
+:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
+.topbar :focus-visible, .stepper :focus-visible { outline-color: #fff; }
+/* the theme box never wraps awkwardly */
+.themebox { flex-wrap: nowrap; }
+.themebox button:disabled { opacity: 0.4; cursor: default; }
+
+/* Back / Next bar */
+.stepbar { position: sticky; bottom: 0; z-index: 5; display: flex; align-items: center; gap: 14px; margin: 24px -22px -44px; padding: 10px 22px; background: var(--panel); border-top: 2px solid var(--blue); box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.16); }
+.stepbar-mid { flex: 1; min-width: 0; text-align: center; font-size: calc(13.5px * var(--ts, 1)); line-height: 1.35; }
+.stepbar .btn { white-space: nowrap; }
+@media (max-width: 720px) { .stepbar { flex-wrap: wrap; margin: 16px -12px -40px; padding: 8px 12px; } .stepbar-mid { order: -1; flex-basis: 100%; text-align: left; } }
+/* help button */
+.helpbtn { width: 28px; height: 28px; border-radius: 50%; background: transparent; border: 1px solid rgba(255, 255, 255, 0.5); color: #fff; font-weight: 700; cursor: pointer; font-size: 15px; }
+.helpbtn:hover { background: rgba(255, 255, 255, 0.18); border-color: #fff; }
+
+/* the schematic board is a dark drawing in every theme: pin its colours */
+.bp-wrap .slot rect.s { stroke: #4b5462; fill: rgba(255, 255, 255, 0.03); }
+.bp-wrap .slot.hl rect.s { stroke: #ffb000; fill: rgba(255, 176, 0, 0.1); }
+.bp-wrap .slot.filled rect.s { fill: #272d37; stroke: #a5aeba; }
+.bp-wrap .slot.sel rect.s { stroke: #fc3d21; }
+.bp-wrap .slot text { fill: #a9b3c1; }
+.bp-wrap .slot.filled text { fill: #f2f4f7; }
+
+/* narrow screens: wide tables scroll sideways inside their panel instead of being cut off */
+@media (max-width: 720px) { .content table { display: block; overflow-x: auto; max-width: 100%; } }

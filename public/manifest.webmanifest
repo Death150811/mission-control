@@ -1,0 +1,11 @@
+{
+  "name": "MISSION CONTROL — Every decision has an orbit",
+  "short_name": "Mission Control",
+  "description": "A space-mission design and flight-operations simulator.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0d1015",
+  "theme_color": "#0b3d91",
+  "icons": [{ "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

@@ -1,0 +1,8 @@
+node_modules/
+dist/
+dist-single/
+*.log
+.DS_Store
+# one-off development patch scripts are not part of the project
+scripts/patch*.cjs
+scripts/recolor.cjs
