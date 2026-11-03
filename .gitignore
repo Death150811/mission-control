@@ -6,3 +6,4 @@ dist-single/
 # one-off development patch scripts are not part of the project
 scripts/patch*.cjs
 scripts/recolor.cjs
+.claude/
