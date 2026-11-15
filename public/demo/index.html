@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MISSION CONTROL: project demo</title>
+<meta name="description" content="Seven-slide demo of MISSION CONTROL, a space-mission design game made for the NASA Space Apps Challenge 2026." />
+<meta name="ai-assistance" content="Code, text and procedural artwork written with Claude (Anthropic) under the team's direction." />
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
+  body { margin: 0; background: #fff; color: #000; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; }
+  .slide { min-height: 100vh; scroll-snap-align: start; display: flex; flex-direction: column; justify-content: center; padding: 6vh 8vw; border-bottom: 1px solid #ccc; position: relative; }
+  h1 { font-size: clamp(40px, 6vw, 76px); margin: 0 0 14px; }
+  h2 { font-size: clamp(28px, 4vw, 48px); margin: 0 0 18px; }
+  p, li { font-size: clamp(19px, 2.2vw, 28px); color: #000; margin: 0 0 12px; }
+  ul { padding-left: 1.2em; margin: 0; }
+  img { width: 100%; max-width: 760px; border: 1px solid #999; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 4vw; align-items: center; }
+  a { color: #000; font-weight: bold; }
+  small { color: #333; font-size: 16px; }
+  .n { position: absolute; right: 3vw; bottom: 3vh; font-size: 16px; color: #333; }
+  @media (max-width: 800px) { .cols { grid-template-columns: 1fr; } }
+  @media print { html { scroll-snap-type: none; } .slide { min-height: 0; height: 100vh; page-break-after: always; } }
+</style>
+</head>
+<body>
+
+<section class="slide">
+  <h1>MISSION CONTROL</h1>
+  <p><b>Every decision has an orbit.</b></p>
+  <p>A game where you design a spacecraft, pick an orbit and a rocket, launch it, and run the mission.</p>
+  <p><small id="team"></small></p>
+  <p><small>NASA Space Apps Challenge 2026 · Challenge: Space Mission Design Game</small></p>
+  <p>Play it: <a href="https://death150811.github.io/mission-control/">death150811.github.io/mission-control</a></p>
+  <div class="n">1 / 7</div>
+</section>
+
+<section class="slide">
+  <div class="cols">
+    <div>
+      <h2>The problem</h2>
+      <ul>
+        <li>Building a space mission means trading mass, power, orbit, rocket and money against each other.</li>
+        <li>Students almost never get to try it themselves.</li>
+        <li>So we made a game where you can.</li>
+      </ul>
+    </div>
+    <img src="./img/earth-orbit.jpg" alt="A satellite orbiting Earth in the game" />
+  </div>
+  <div class="n">2 / 7</div>
+</section>
+
+<section class="slide">
+  <div class="cols">
+    <img src="./img/workshop.jpg" alt="Building a spacecraft in 3D" />
+    <div>
+      <h2>What you do</h2>
+      <ul>
+        <li>Build a spacecraft in 3D and watch mass, power and cost change.</li>
+        <li>Choose the orbit and the rocket.</li>
+        <li>Launch, then run the mission day by day and handle problems.</li>
+        <li>At the end, see what went wrong and how to score higher.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="n">3 / 7</div>
+</section>
+
+<section class="slide">
+  <h2>Real physics under the hood</h2>
+  <div class="cols" style="margin-bottom:16px"><img src="./img/window.jpg" alt="Mars launch window planner" /><img src="./img/deltav.jpg" alt="Delta-v map" /></div>
+  <ul>
+    <li>The rocket equation, orbits, radio links, eclipses, radiation and heat are calculated, not faked.</li>
+    <li>Miss the Mars launch window and you lose payload or time.</li>
+  </ul>
+  <div class="n">4 / 7</div>
+</section>
+
+<section class="slide">
+  <div class="cols">
+    <div>
+      <h2>NASA data we used</h2>
+      <ul>
+        <li>NASA Planetary Fact Sheets for Earth, Moon and Mars.</li>
+        <li>NASA mission pages for real examples: LRO, MRO, MAVEN, OSIRIS-REx, Dawn, GRAIL, Landsat 9, Webb.</li>
+        <li>Every technology in the game points to a real one.</li>
+      </ul>
+    </div>
+    <img src="./img/techtree.jpg" alt="Technology tree with real examples" />
+  </div>
+  <div class="n">5 / 7</div>
+</section>
+
+<section class="slide">
+  <div class="cols">
+    <img src="./img/ops.jpg" alt="Running a mission in orbit" />
+    <div>
+      <h2>Why it matters</h2>
+      <ul>
+        <li>It teaches how real missions are planned, by playing.</li>
+        <li>5 missions, 79 parts, 13 tests, 17 achievements.</li>
+        <li>Works in any browser. No install.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="n">6 / 7</div>
+</section>
+
+<section class="slide">
+  <div class="cols">
+    <div>
+      <h2>Links and how we built it</h2>
+      <ul>
+        <li>Play: <a href="https://death150811.github.io/mission-control/">death150811.github.io/mission-control</a></li>
+        <li>Code: <a href="https://github.com/Death150811/mission-control">github.com/Death150811/mission-control</a></li>
+        <li>Next: online multiplayer for classrooms and a built-in tutorial.</li>
+      </ul>
+      <p><small><b>AI use:</b> the code and the drawn artwork were written with Claude (Anthropic) under our direction. No photos or AI-generated images. Reference numbers are rounded.</small></p>
+    </div>
+    <img src="./img/launchpad.jpg" alt="Rocket on the launch pad" />
+  </div>
+  <div class="n">7 / 7</div>
+</section>
+
+<script>
+  // Edit this line and push to put your team name and members on slide 1.
+  document.getElementById('team').textContent = 'Team: YOUR TEAM NAME · Members: NAME 1, NAME 2';
+  var s = [].slice.call(document.querySelectorAll('.slide'));
+  function cur() { var y = scrollY + innerHeight / 2, k = 0; s.forEach(function (e, i) { if (e.offsetTop <= y) k = i; }); return k; }
+  function go(i) { s[Math.max(0, Math.min(6, i))].scrollIntoView({ behavior: 'smooth' }); }
+  document.addEventListener('keydown', function (e) {
+    if (['ArrowRight', 'ArrowDown', 'PageDown', ' '].indexOf(e.key) > -1) { e.preventDefault(); go(cur() + 1); }
+    if (['ArrowLeft', 'ArrowUp', 'PageUp'].indexOf(e.key) > -1) { e.preventDefault(); go(cur() - 1); }
+  });
+</script>
+</body>
+</html>

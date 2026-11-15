@@ -40,5 +40,6 @@
     "vite-plugin-singlefile": "^2.3.4",
     "vitest": "^2.1.4"
   },
-  "description": "MISSION CONTROL: an interactive space-mission design and flight-operations simulator"
+  "description": "MISSION CONTROL: an interactive space-mission design and flight-operations simulator",
+  "aiAssistance": "Code, text and procedural artwork written with Claude (Anthropic) under human direction; see README, 'Use of Super Intelligence (SI)'."
 }

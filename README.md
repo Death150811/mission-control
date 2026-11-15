@@ -39,6 +39,15 @@ Also: five scenarios with mission patches, three difficulty levels, a **space-pr
 saved blueprints, comparison, local leaderboard, learning center with calculators, and team mode (real same-browser sync; see
 `docs/MULTIPLAYER.md`).
 
+## Use of Super Intelligence (SI)
+
+Built for the NASA Space Apps Challenge 2026 with SI assistance. **Code:** the TypeScript simulation engine, the React interface and the build and deployment files were written with Claude (Anthropic) under the team's direction and tested with the included unit tests. **Text and data:** descriptions, educational notes and the rounded reference figures were drafted with SI and should be checked against the official sources linked from the Real data page. **Images:** there are no photographs or generated raster images; the emblems, mission patches, planets and 3D scenes are vector or procedural graphics produced by code written with SI. No NASA logos, flags or mission identifiers are used; the project is not affiliated with or endorsed by NASA or any agency.
+
+## NASA data and resources
+
+* NASA Planetary Fact Sheets (Earth, Moon, Mars): https://nssdc.gsfc.nasa.gov/planetary/factsheet/
+* NASA mission pages used for the real-world analogues: LRO https://science.nasa.gov/mission/lro/ , MRO https://science.nasa.gov/mission/mars-reconnaissance-orbiter/ , MAVEN https://science.nasa.gov/mission/maven/ , OSIRIS-REx https://science.nasa.gov/mission/osiris-rex/ , Dawn https://science.nasa.gov/mission/dawn/ , GRAIL https://science.nasa.gov/mission/grail/ , Webb https://science.nasa.gov/mission/webb/ , Landsat 9 https://landsat.gsfc.nasa.gov/satellites/landsat-9/
+
 ## Everyday convenience
 
 * A **Back / Next bar** under every design step says where you are, what to do there and how many launch blockers or warnings remain.

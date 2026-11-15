@@ -51,6 +51,9 @@ export default function HelpModal({ onClose }: { onClose: () => void }) {
           </div>
         </div>
       </div>
+      <p className="dim" style={{ marginTop: 14, fontSize: 'calc(12.5px * var(--ts, 1))' }}>
+        <b>Use of Super Intelligence (SI):</b> this game was built for the NASA Space Apps Challenge 2026 with SI assistance. The program code, the texts and the procedural artwork (vector emblems, 3D scenes drawn by code) were written with Claude (Anthropic) under the team's direction. There are no photographs or generated raster images. Reference figures on the Real data page are rounded; check official sources before relying on them. Not affiliated with or endorsed by NASA or any agency.
+      </p>
     </Modal>
   );
 }
